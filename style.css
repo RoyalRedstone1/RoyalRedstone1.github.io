@@ -30,8 +30,8 @@ EXCEPT for the navigation */
     /* this is only for a background image! */
     /* if you want to put images IN the header, 
     you can add them directly to the <div id="header"></div> element! */
-    /*background-image: var(--header-image);
-    background-size: 100%;*/
+    background-image: url("website Assets/frog dude.jpg");
+    background-size: 100%;
 }
 .navbar {
     width:100% ;
@@ -90,7 +90,41 @@ main {
 #rightSidebar {
     order: 3;
 }
-
+.blogsection {
+  
+  display: block;
+  overflow: auto;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  font-size:18px ;
+  line-height: 1.8;
+  padding:0px 30px 30px 30px;
+}
+.blogentry {
+   margin:20px;
+   
+}
+.blogentry h1 {
+  margin:auto ;
+  color: black;
+}
+.blogentry a b {
+    color:black;
+    margin:auto;
+}
+.blogentry p{
+    color: black;
+}
+.metanotes {
+  margin:0px ;
+  color: rgb(141, 115, 135);
+}
+.blogentry a {
+color:#6b0f47;
+}
+.blogentry a:hover {
+  color: #8d7b86;
+}
 footer {
     background-color: #13092D;
     /* background color for footer */
