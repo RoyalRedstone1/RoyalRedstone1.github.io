@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Website Assets/Eye on the game.png">
+    <title>RoyalRedstone1's Website</title>
+    <meta name="author" content="RoyalRedstone1">
+  </head>
+  <body background="Website Assets/background.png">
+    <div id="container">
+      <div id="header"></div>
+      <div id="headerArea">
+        <div class="navbar">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="portfolio.html"><u>ART</u></a>
+          <a href="personal.html">STUFF</a>
+          <a href="blog.html">BLOG</a>
+          <a href="links.html">LINKS</a>
+        </div>
+      </div>
+      <div id="flex">
+      <main>
+        <p>Heres alot of the realy cool stuff I have made over the years</p>
+        <div class="art">
+            <ul>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Eye on the game.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/BoobTubeSurfin.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Architecture t shirt.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/5 point perspective.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/alchoholism.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Bear.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Brian.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Cock of the walk.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Fallout 3 tribute.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Charcoal Creature.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Clown Final.png">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/creepy guy.png">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Dapper Skeleton.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Eyeglass Doodle.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Drewg final.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/masks.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Robot.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Squid Doodle.jpg">
+                </li>
+                <li>
+                    <img class="myImages" id="myImg" src="Portfolio/Weird Face.jpg">
+                </li>
+            </ul>
+        </div>
+        </div>
+      </main>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <style>
+        * {
+  box-sizing: border-box;
+}
+    main{
+        height: auto;
+        width:100%;
+        padding: 0px;
+    }
+        ul {
+  margin-left: -40px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+li {
+  height: 25vh;
+  flex-grow: 1;
+  margin: 5px;
+}
+
+li:last-child {
+  flex-grow: 10;
+}
+    </style>
+    <script>// create references to the modal...
+    var modal = document.getElementById('myModal');
+    // to all images -- note I'm using a class!
+    var images = document.getElementsByClassName('myImages');
+    // the image in the modal
+    var modalImg = document.getElementById("img01");
+    // and the caption in the modal
+    var captionText = document.getElementById("caption");
+
+    // Go through all of the images with our custom class
+    for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    <footer style="color: white">RoyalRedstone1's Website</footer>
+  </body>
+</html>

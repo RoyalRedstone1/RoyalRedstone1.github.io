@@ -1,0 +1,279 @@
+body {
+    background-color: #73a8a0;
+    background-repeat:repeat-x
+}
+* {
+    box-sizing: border-box;
+    color: #ffffff;
+}
+#container {
+    max-width: 900px;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+    and change the media query according to the comment! */
+    margin: 0 auto;
+    /* this centers the entire page */
+}
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+    font-weight: bold;
+    /* if you want to remove the underline
+    you can add a line below here that says:
+    text-decoration:none; */
+}
+#header {
+    width: 100%;
+    background-color: #0b4275;
+    /* header color here! */
+    height: 150px;
+    /* this is only for a background image! */
+    /* if you want to put images IN the header, 
+    you can add them directly to the <div id="header"></div> element! */
+    /*background-image: var(--header-image);
+    background-size: 100%;*/
+}
+.navbar {
+    width:100% ;
+    background-color: rgb(8, 30, 73);
+    overflow: auto;
+}
+.navbar a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size:21px ;
+    font-weight:bold;
+    width:16.6% ;
+    text-align: center;
+    padding-top:10px ;
+    padding-bottom:10px ;
+}
+
+.navbar a:hover {
+    background-color: rgb(4, 18, 46);
+ }
+
+ #flex {
+    display: flex;
+}
+
+aside {
+    background-color: #203560;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    /* this makes the sidebar text slightly smaller */
+}
+
+/* this is the color of the main content area,
+    between the sidebars! */
+main {
+    background-color: #2f5c7f;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+/* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+    order: 1;
+}
+.leftImg{
+    width: 100%;;
+}
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    background-color: #13092D;
+    /* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    /* this centers the footer text */
+}
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: #13092D;
+    border: 1px solid #ED64F5;
+    padding: 10px;
+}
+/*
+.leftcolumn {
+  float: left;
+  height: auto;
+  width: 25%;
+  padding-bottom: 1px;
+}
+
+.rightcolumn {
+  float: left;
+  height: auto;
+  width: 75%;
+  padding: 40px;
+}
+*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about {
+  position: fixed;
+  width: 28%;
+  background-color: white;
+  height: 100%;
+  padding: 40px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: left;
+}
+.art {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 20px;
+    color: black;
+    height: 100%;
+    /*overflow: scroll;*/
+}
+
+#myImg {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  width: auto;
+  max-height: 600px;
+  padding: 30px;
+  background-image: url("/img/pinkgrid.png");
+  border: 5px solid #0b4275;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below*/
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+    since the sidebars would be too small on a mobile device.
+    feel free to play around with the order!*/
+    main {
+        order: 1;
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
+
+ .maincontainer{
+    display: grid;
+    grid-template-rows:160px 160px 160px 160px 160px;
+    grid-template-columns:205px 410px 205px;
+    margin:0px;
+    height:800px;
+    z-index:0 ;
+}
+.leftside{
+    grid-row:1 / 6 ;
+    grid-column:1 /2 ;
+    background-color: rgb(251, 255, 227);
+    margin: 20px 5px 20px 10px;
+    font-size:18px ;
+    padding:10px ;
+    border:3px solid rgb(235, 129, 140) ;
+    border-radius:10px ;
+}
+
+.rightside{
+    grid-row:1 / 6 ;
+    grid-column:3 / 4 ;
+    background-color: rgb(251, 255, 227);
+    margin: 20px 10px 20px 5px;
+    text-align: center;
+    font-size:18px ;
+    padding:10px ;
+    border:3px solid rgb(235, 129, 140) ;
+    border-radius:10px ;
+}
