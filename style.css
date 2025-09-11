@@ -30,7 +30,7 @@ EXCEPT for the navigation */
     /* this is only for a background image! */
     /* if you want to put images IN the header, 
     you can add them directly to the <div id="header"></div> element! */
-    background-image: url("website Assets/frog dude.jpg");
+    background-image: url("Website Assets/frog dude.jpg");
     background-size: 100%;
 }
 .navbar {
@@ -311,6 +311,7 @@ and then subtrack it by 100. use this new number as the
     border:3px solid rgb(235, 129, 140) ;
     border-radius:10px ;
 }
+
 
 
 
