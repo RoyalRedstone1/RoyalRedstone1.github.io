@@ -1,6 +1,8 @@
 body {
     background-color: #73a8a0;
-    background-repeat:repeat-x
+    background-image: url("Website\ Assets/background.png");
+    background-repeat: repeat-x;
+    /*background-attachment: fixed;*/
 }
 * {
     box-sizing: border-box;
