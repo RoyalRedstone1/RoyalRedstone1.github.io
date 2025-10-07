@@ -1,8 +1,6 @@
 body {
     background-color: #73a8a0;
-    background-image: url("Website\ Assets/background.png");
-    background-repeat: repeat-x;
-    /*background-attachment: fixed;*/
+    background-repeat:repeat-x
 }
 * {
     box-sizing: border-box;
@@ -32,7 +30,7 @@ EXCEPT for the navigation */
     /* this is only for a background image! */
     /* if you want to put images IN the header, 
     you can add them directly to the <div id="header"></div> element! */
-    background-image: url("Website Assets/frog dude.jpg");
+    background-image: url("website Assets/frog dude.jpg");
     background-size: 100%;
 }
 .navbar {
@@ -126,6 +124,27 @@ color:#6b0f47;
 }
 .blogentry a:hover {
   color: #8d7b86;
+}
+.blogentry_fullsize{
+  margin:30px 50px 50px 50px;
+}
+
+.blogentry_fullsize h1 {
+  font-size:2.5em ;
+  margin:auto ;
+}
+.blogsection_postsize{
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  overflow: auto;
+  color:#21031b;
+  font-size:18px ;
+  line-height: 1.8;
+}
+hr{
+  border: 1px dashed rgb(195, 178, 191);
+  margin-top:15px ;
 }
 footer {
     background-color: #13092D;
@@ -313,7 +332,3 @@ and then subtrack it by 100. use this new number as the
     border:3px solid rgb(235, 129, 140) ;
     border-radius:10px ;
 }
-
-
-
-
